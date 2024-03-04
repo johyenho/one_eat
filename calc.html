@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증가하는 단추만들기</title>
+</head>
+<script>
+    function plus() {
+        const result = document.getElementById("result");
+        const current = parseInt(result.innerText, 10);
+        // parseInt 는 result.innerText안에 있는 값을 10진수로 변환
+        result.innerHTML = current + 1
+    }
+    function minus() {
+        const result = document.getElementById("result");
+        const current = parseInt(result.innerText, 10);
+        result.innerHTML = current - 1
+    }
+</script>
+
+<body>
+    <p>simple Counter</p>
+    <h2 id="result">0</h2>
+    <div>
+        <button onclick="minus()">Minus</button>
+        <button onclick="plus()">Plus</button>
+    </div>
+    <!-- <script src="./index.html"></script> -->
+</body>
+
+</html>
+
+<!-- 
+    명령형 프로그래밍(제이쿼리 가능)
+    절차를 하나하나 다 나열 해야함.
+    1. 결과를 표시할 요소를 가지고 있다.(id = result)
+    2. 현재 결과값을 10진수 기준, 숫자형으로 변환해서 가져와 current라는 상수에 저장한다.
+    3. Current 상수에 저장된 값을 결과를 표시할 요소의값에서 plus면 + 1) minus라면 -1 해서 넣는다.
+
+
+    위 값을 간소화시킨것이 아래에 선언형 프로그래밍임.
+ -->
+
+
+<!-- 
+    선연형 프로그래밍(리액트로가능)
+    1. plus를 누르면 result값에 +1를 minus를 눌으면 반대로 한다.
+  -->

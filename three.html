@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addItem(){
+            const ul = document.getElementById("list");
+            for(let i= 0; i<5;i++){
+                const curElm = document.createElement("li");
+                curElm.innerHTML = `Hi ${i}`;
+                ul.append(curElm)
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2 id="theme">Item List</h2>
+    <div>
+        <ul id="list"></ul>
+        <button onclick="addItem()">add</button>
+    </div>
+</body>
+</html>
